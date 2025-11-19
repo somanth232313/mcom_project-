@@ -1,3 +1,4 @@
+/* Reset and basic font setup */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +6,237 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5;
+  color: #333;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* --- STYLES FOR THE LOGIN PAGE --- */
+
+/* Login Page Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Login Form Styling */
+.login-form {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box; /* Ensures padding doesn't break layout */
+}
+
+.login-form h1 {
+  text-align: center;
+  color: #1a1a1a;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+/* Form Group (label + input) */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  box-sizing: border-box; /* Ensures padding doesn't break layout */
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+/* Login Button */
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+/* Error Message */
+.error-message {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 0.75rem;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* --- STYLES FOR THE DASHBOARD PAGE --- */
+
+/* Dashboard Layout */
+.dashboard-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.dashboard-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-nav h1 {
+  color: #1a1a1a;
+  font-size: 1.5rem;
+}
+
+.logout-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #007bff;
+  background-color: transparent;
+  border: 2px solid #007bff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.logout-button:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.dashboard-main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+/* Card Styling (for Form and List) */
+.form-card,
+.list-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+.form-card {
+  flex: 1;
+  min-width: 300px;
+}
+
+.list-card {
+  flex: 2;
+  min-width: 400px;
+}
+
+.form-card h2,
+.list-card h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+/* Form-specific styles */
+.form-group textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.form-group textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+/* Exhibit List Styling */
+.exhibit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.exhibit-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.exhibit-item:last-child {
+  border-bottom: none;
+}
+
+.exhibit-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.exhibit-info strong {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.exhibit-info span {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.delete-button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #dc3545;
+  background-color: transparent;
+  border: 2px solid #dc3545;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.delete-button:hover {
+  background-color: #dc3545;
+  color: #ffffff;
 }
