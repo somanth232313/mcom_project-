@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "435531436468",
+    "project_id": "smart-gallery-project",
+    "storage_bucket": "smart-gallery-project.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:435531436468:android:876691f4e4058ca2ee62e1",
+        "android_client_info": {
+          "package_name": "com.smartgalleryapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKgj2kdM2_GH8yLCaBSInLkW3V8wadTfI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
